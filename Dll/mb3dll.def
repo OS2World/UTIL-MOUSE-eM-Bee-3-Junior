@@ -1,0 +1,14 @@
+LIBRARY MB3DLL INITGLOBAL
+DESCRIPTION 'eM Bee 3 Freeware version (c) 1997 Jan-Helge Bergesen'
+DATA SINGLE SHARED
+CODE LOADONCALL
+
+EXPORTS
+  GetGloabls @1 NONAME
+  _DLL_InitTerm @2 NONAME
+  eMBee3Hook @3 NONAME
+  eMBeeInitHook @4 NONAME
+  eMBeeHookOff @5 NONAME
+
+
+STACKSIZE 32768

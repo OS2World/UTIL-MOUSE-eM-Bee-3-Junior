@@ -1,0 +1,9 @@
+HISTORY:
+	1.0 - Initial release.
+	1.1 - Fixed some idiotic mistakes of mine %)
+			( Thanks to Mark Davidson for poining them out).
+	1.11- Fixed misc. small mistakes and typo's in docs and dialogs
+            - Fixed error in install.cmd, allowing for install with current dir
+              as working dir. ( thanks to Klaus H. Fuchs for pointing that out )
+        1.12- Fixed paint routine ( background was cleared with wrong color-index)
+

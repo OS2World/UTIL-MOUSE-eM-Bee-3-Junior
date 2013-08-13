@@ -1,0 +1,104 @@
+
+/* OS/2 Warp 4.0 Resource Script File - Created by Universal Resource Editor */
+
+#define INCL_WINSYS
+#define INCL_WINBIDI
+#define INCL_WINSTDDLGS
+#define INCL_WINSTDSPIN
+#define INCL_NLS
+#define INCL_SW
+
+#include <os2.h>
+
+#include "\work\produce\mb3hook\freeware\main\interface.h"
+
+BITMAP      IDB_UNABLE                         "\\Work\\Produce\\MB3Hook\\Freeware\\Main\\gfx\\disab_b.bmp"
+BITMAP      IDB_ENABLE                         "\\Work\\Produce\\MB3Hook\\Freeware\\Main\\gfx\\enab_b.bmp"
+BITMAP      IDB_GOSH                           "\\Work\\Produce\\MB3Hook\\Freeware\\Main\\Gosh.BMP"
+BITMAP      IDB_NULL                           "\\Work\\Produce\\MB3Hook\\Freeware\\Main\\gfx\\wait.bmp"
+BITMAP      IDB_ENABLE_MASK                    "\\Work\\Produce\\MB3Hook\\Freeware\\Main\\gfx\\enab_w.bmp"
+BITMAP      RB_ANIMATEWINDOWLIST               "\\Work\\Produce\\MB3Hook\\Freeware\\Main\\gfx\\disab_w.bmp"
+ICON        IDDLG_MAIN                         "\\Work\\Produce\\MB3Hook\\Freeware\\Main\\Bill.ico"
+DLGTEMPLATE IDDLG_MAIN
+BEGIN
+    DIALOG "eM Bee 3 :Junior!!", IDDLG_MAIN, 60, 76, 356, 135, FS_NOBYTEALIGN |
+                FS_DLGBORDER | WS_CLIPSIBLINGS | WS_SAVEBITS | WS_VISIBLE,
+                FCF_TITLEBAR | FCF_SYSMENU | FCF_MINBUTTON | FCF_CLOSEBUTTON |
+                FCF_TASKLIST
+    PRESPARAMS PP_FONTNAMESIZE, "9.WarpSans"
+    PRESPARAMS PP_USER, "10.System Proportional"
+    BEGIN
+        CONTROL "[   ... empty  ...    ]", TXT_STATUS, 188, 10, 148, 5,
+                                            WC_STATIC, SS_TEXT | DT_RIGHT |
+                                            DT_TOP | DT_MNEMONIC | WS_GROUP |
+                                            WS_VISIBLE
+                PRESPARAMS PP_FONTNAMESIZE, "8.System VIO"
+        CONTROL "~Help",               103, 253, 35, 95, 20, WC_BUTTON,
+                                            BS_PUSHBUTTON | BS_DEFAULT |
+                                            BS_HELP | WS_GROUP | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "eM Bee 3: Junior! v.1", 104, 49, 111, 198, 20, WC_STATIC,
+                                            SS_TEXT | DT_CENTER | DT_VCENTER |
+                                            DT_WORDBREAK | DT_MNEMONIC |
+                                            WS_GROUP | WS_VISIBLE
+                PRESPARAMS PP_FONTNAMESIZE, "18.Tms Rmn Bold Italic"
+        CONTROL "Copyright (C) 1997 Jan-Helge Bergesen
+
+Junior! COMES WITH ABSOLUTELY NO WARRANTY; for details see help.
+
+This is free software, and you are welcome to redistribute it under certain conditions; press ""Help"", and select ""licence"".",
+                                       105, 17, 61, 199, 46, WC_STATIC, SS_TEXT |
+                                            DT_CENTER | DT_TOP | DT_WORDBREAK |
+                                            DT_MNEMONIC | WS_GROUP | WS_VISIBLE
+                PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        CONTROL "Control",             3003, 229, 60, 121, 46, WC_STATIC,
+                                            SS_GROUPBOX | WS_GROUP | WS_VISIBLE
+        CONTROL "~Enable",             IDPB_ENABLE, 236, 89, 50, 10, WC_BUTTON,
+                                            BS_AUTOCHECKBOX | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "~Animate windowlist", RB_ANIMATEWINDOWLIST, 249, 78, 96, 10,
+                                            WC_BUTTON, BS_AUTORADIOBUTTON |
+                                            WS_TABSTOP | WS_VISIBLE
+        CONTROL "~Normal windowlist",  RB_NORMALWINDOWLIST, 249, 64, 95, 10,
+                                            WC_BUTTON, BS_AUTORADIOBUTTON |
+                                            WS_TABSTOP | WS_VISIBLE
+        CONTROL "Text",                LINE_ONE, 15, 108, 333, 7, "3D.Line",
+                                            WS_VISIBLE
+        CONTROL "E~xit",               PB_EXIT, 253, 21, 95, 12, WC_BUTTON,
+                                            BS_PUSHBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+    END
+END
+
+DLGTEMPLATE IDLG_ERROR
+BEGIN
+    DIALOG "eMBee 3: Eeek!", IDLG_ERROR, 34, 82, 237, 68, FS_NOBYTEALIGN |
+                FS_DLGBORDER | WS_CLIPSIBLINGS | WS_SAVEBITS | WS_VISIBLE,
+                FCF_TITLEBAR | FCF_SYSMENU
+    PRESPARAMS PP_FONTNAMESIZE, "9.WarpSans"
+    PRESPARAMS PP_USER, "10.System Proportional"
+    BEGIN
+        CONTROL "Enter",               DID_OK, 9, 3, 51, 14, WC_BUTTON,
+                                            BS_PUSHBUTTON | BS_DEFAULT |
+                                            WS_TABSTOP | WS_VISIBLE
+        CONTROL "Function failing",    IDT_TITLE, 66, 10, 167, 54, WC_STATIC,
+                                            SS_GROUPBOX | DT_MNEMONIC |
+                                            WS_GROUP | WS_VISIBLE
+                PRESPARAMS PP_FONTNAMESIZE, "11.System VIO"
+        CONTROL "Explanation",         IDT_MESSAGE, 72, 15, 154, 39, WC_STATIC,
+                                            SS_TEXT | DT_LEFT | DT_TOP |
+                                            DT_WORDBREAK | DT_MNEMONIC |
+                                            WS_GROUP | WS_VISIBLE
+                PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        CONTROL IDB_GOSH,              IDB_GOSH, 18, 26, 32, 26, WC_STATIC,
+                                            SS_BITMAP | WS_GROUP | WS_VISIBLE
+    END
+END
+
+STRINGTABLE
+BEGIN
+    IDS_NO_DLL,                         "Unable to load DLL!!\012eM Bee Junior looked, but could not find his beloved friend named MB3FREE.DLL.\012Do you know where he'd be gone??"
+    IDS_ENABLE,                         "Toggle Junior's activities"
+    IDS_ANIMATEWINLIST,                 "Animate windowlist ??"
+    IDS_NORMALWINLIST,                  "Show windowlist normally"
+END

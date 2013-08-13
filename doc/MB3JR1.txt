@@ -1,0 +1,28 @@
+                          Upload Information Template for Hobbes.nmsu.edu
+                          ===============================================
+
+        Archive Filename: mb3jr1.zip
+       Short Description: eM Bee3: Junior! - a mouse button 3 enhancer for OS/2 Warp
+        Long Description: Emulates double clicks in containers ++
+
+      Proposed directory
+           for placement: /pub/os2/util/mouse
+
+               Your name: Jan-Helge Bergesen
+           Email address: Jan.H.Bergesen@lhg.hib.no
+    Program contact name: (same)
+   Program contact email: (same)
+             Program URL: (none) 
+
+      Would you like the
+   contact email address
+    included in listings? yes
+
+Operating System/Version: OS/2 Warp v.3
+ Additional requirements: EMX Runtime
+
+                Replaces: mb3jr.zip
+
+
+
+
